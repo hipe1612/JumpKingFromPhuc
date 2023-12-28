@@ -28,13 +28,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 820116934277359394}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.0098220715, z: -0, w: 0.9999518}
   m_LocalPosition: {x: 37.58, y: 1.97, z: -1.74}
   m_LocalScale: {x: 1.8550416, y: 2.0780888, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: -1.126, z: 0}
 --- !u!212 &2786929004148859273
 SpriteRenderer:
@@ -124,21 +124,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 820116934277359394}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4f37a23e890a7f448fbb3f2db9c7084, type: 3}
+  m_Script: {fileID: 11500000, guid: 5e613c2c6a0450044a08e0a8f83a50f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 7940859059211142444}
-  anim: {fileID: 7211004364869949260}
-  sprite: {fileID: 2786929004148859273}
+  rb: {fileID: 0}
+  anim: {fileID: 0}
+  sprite: {fileID: 0}
   groundMask:
     serializedVersion: 2
     m_Bits: 64
   wallMask:
     serializedVersion: 2
     m_Bits: 128
-  BounceMat: {fileID: 6200000, guid: 624a27d9ad71cda4bbbb6cccc38b8028, type: 2}
-  NormalMat: {fileID: 6200000, guid: 67f83f18c3273574aa53f01b3cd25752, type: 2}
-  moveSpeed: 8
+  BounceMat: {fileID: 0}
+  NormalMat: {fileID: 0}
+  moveSpeed: 5
   moveInput: 0
   isGrounded: 0
   isCollidingWithWall: 0
@@ -152,7 +152,6 @@ BoxCollider2D:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 820116934277359394}
   m_Enabled: 1
-  serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 6200000, guid: e89f121723159f844a6917fed2a601ea, type: 2}
   m_IncludeLayers:
@@ -176,8 +175,7 @@ BoxCollider2D:
     m_Bits: 4294967295
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
+  m_UsedByComposite: 0
   m_Offset: {x: 0.023446798, y: 0.028148532}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
@@ -188,11 +186,12 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
+  serializedVersion: 2
   m_Size: {x: 0.9883032, y: 0.97963536}
   m_EdgeRadius: 0
 --- !u!95 &7211004364869949260
 Animator:
-  serializedVersion: 7
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -206,7 +205,6 @@ Animator:
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1

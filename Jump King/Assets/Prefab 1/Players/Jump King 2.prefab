@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 1638418037584718073}
   - component: {fileID: 2678412717429345034}
   - component: {fileID: 8035769772530534904}
-  - component: {fileID: 8234759434444342884}
   - component: {fileID: 5103695130962874529}
   - component: {fileID: 8250944353170781885}
+  - component: {fileID: 2703652901059911287}
   m_Layer: 0
   m_Name: Jump King 2
   m_TagString: Player
@@ -28,13 +28,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2115090827322682858}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.0098220715, z: -0, w: 0.9999518}
   m_LocalPosition: {x: 37.58, y: 1.97, z: -1.74}
   m_LocalScale: {x: 1.8550416, y: 2.0780888, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: -1.126, z: 0}
 --- !u!212 &2678412717429345034
 SpriteRenderer:
@@ -115,35 +115,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &8234759434444342884
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2115090827322682858}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4f37a23e890a7f448fbb3f2db9c7084, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 8035769772530534904}
-  anim: {fileID: 8250944353170781885}
-  sprite: {fileID: 2678412717429345034}
-  groundMask:
-    serializedVersion: 2
-    m_Bits: 64
-  wallMask:
-    serializedVersion: 2
-    m_Bits: 128
-  BounceMat: {fileID: 6200000, guid: 624a27d9ad71cda4bbbb6cccc38b8028, type: 2}
-  NormalMat: {fileID: 6200000, guid: 67f83f18c3273574aa53f01b3cd25752, type: 2}
-  moveSpeed: 8
-  moveInput: 0
-  isGrounded: 0
-  isCollidingWithWall: 0
-  canJump: 1
-  jumpValue: 0
 --- !u!61 &5103695130962874529
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -152,7 +123,6 @@ BoxCollider2D:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2115090827322682858}
   m_Enabled: 1
-  serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 6200000, guid: e89f121723159f844a6917fed2a601ea, type: 2}
   m_IncludeLayers:
@@ -176,8 +146,7 @@ BoxCollider2D:
     m_Bits: 4294967295
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
+  m_UsedByComposite: 0
   m_Offset: {x: 0.023446798, y: 0.028148532}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
@@ -188,11 +157,12 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
+  serializedVersion: 2
   m_Size: {x: 0.9883032, y: 0.97963536}
   m_EdgeRadius: 0
 --- !u!95 &8250944353170781885
 Animator:
-  serializedVersion: 7
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -206,9 +176,37 @@ Animator:
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2703652901059911287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2115090827322682858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e613c2c6a0450044a08e0a8f83a50f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 0}
+  anim: {fileID: 0}
+  sprite: {fileID: 0}
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 64
+  wallMask:
+    serializedVersion: 2
+    m_Bits: 128
+  BounceMat: {fileID: 0}
+  NormalMat: {fileID: 0}
+  moveSpeed: 5
+  moveInput: 0
+  isGrounded: 0
+  isCollidingWithWall: 0
+  canJump: 1
+  jumpValue: 0
